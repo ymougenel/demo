@@ -6,7 +6,7 @@ pipeline {
     }
     stages {
 
-         stage('Test') {
+         /*stage('Test') {
             steps {
                script {
                   docker.image(MAVEN_IMAGE).inside('-v /var/lib/jenkins/.m2:/root/.m2') {
@@ -16,7 +16,7 @@ pipeline {
 
             }
 
-         }
+         }*/
 
          stage('Build') {
             steps {
