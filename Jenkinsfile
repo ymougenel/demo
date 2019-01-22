@@ -9,7 +9,7 @@ pipeline {
          stage('Test') {
             steps {
                script {
-                  docker.image(MAVEN_IMAGE).inside('-v /home/yann/.m2:/root/.m2 -v /home/yann/.m2/settings.xml:/root/.m2/settings.xml') {
+                  docker.image(MAVEN_IMAGE).inside('-v /var/lib/jenkins/.m2:/root/.m2') {
                       sh 'mvn test'
                    }
                }
